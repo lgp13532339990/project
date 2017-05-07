@@ -1,0 +1,500 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../iconfont/iconfont.eot');
+  src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../iconfont/iconfont.woff') format('woff'),
+  url('../iconfont/iconfont.ttf') format('truetype'),
+  url('../iconfont/iconfont.svg#iconfont') format('svg');
+}
+body{
+	    font-family: "Univers45","Microsoft YaHei New","Microsoft Yahei","微软雅黑",宋体,SimSun,STXihei,"华文细黑",sans-serif;
+
+}
+a{
+	text-decoration: none !important;
+	color: black;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+a:hover{
+	color: black;
+}
+ul li{
+	list-style: none !important;
+}
+span{
+	font-family:"iconfont"; 
+}
+.row{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+/*头部开始*/
+.header{
+	height: 90px;
+	position: relative;
+}
+.header .right{
+	float: right;
+}
+.header .right a:first-child span{
+	font-size: 35px;
+	line-height: 90px;
+	padding-right: 40px;
+}
+.header .logo{
+	position: absolute;
+	margin-top: 20px;
+	padding-left: 40px;
+}
+.header .left{
+	padding-left: 40px;
+	float: left;
+}
+.header .left a{
+	padding: 15px;
+	display: inline-block;
+	line-height: 90px;
+}
+.header .right a:last-child{
+	line-height: 90px;
+	padding-right: 40px;
+}
+.header .aside1{
+ 	position: absolute;
+ 	top: 92px;
+ 	right: 10px;
+ }
+.header .aside1 li a{
+ 	font-size: 16px;
+ 	font-weight: bold;
+ }
+.header .aside1 li{
+  	line-height: 60px;
+  }
+.header .aside1 .min-list{
+	display: none;
+} 
+.header .aside1{
+	display: none;
+}
+.header .aside1 .min-list{
+	background-color: rgba(219,219,219,.3);
+}
+.header .aside1 .min-list li a{
+	font-size: 14px;
+	color: #666;
+}
+/*头部结束*/
+/*主体块开始*/
+	/*第一块开始*/
+.tuone{
+	position: relative;
+}
+.tuone .title,.tuone .btn{
+	padding-left: 45px;
+}
+.tuone .title h2 a{
+	color: #333;
+}
+.tuone .title p a{
+	font-size:20px;
+	color: #333; 
+}
+.tuone .btn button{
+	width: 88px;
+	height: 28px;
+	background-color: #0b2749;
+    border: 1px solid #666;
+    border-radius: 2px;
+    color:white;
+}
+	/*第一块结束*/
+	/*第二块开始*/
+.sty h2{
+	width: 100%;
+	line-height: 110px;
+	text-align: center;
+	background-color: #EBEBEB;
+	color: #333;
+	margin-bottom: 0;
+}
+	/*第二块结束*/
+	/*goods开始*/
+.goods{
+	background-color: #F9F9F9;
+	/*box-sizing:border-box;*/
+}
+.goods .gh{
+	background-color: white;
+	/*box-shadow: 10px 10px #ccc;*/
+	/*border-left: 8px solid #ccc;*/
+	border-bottom: 2px solid #F9F9F9;
+	border-right: 2px solid #F9F9F9;
+	padding: 50px 30px;
+	box-sizing:border-box;
+
+}
+.goods .gh .title .p{
+	font-size: 18px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.goods .gh .title .span{
+	font-size: 10px;
+	display: block;
+	text-align: center;
+}
+	/*goods结束*/
+	/*第三块开始*/
+.tuthree,.tufour,.tufive,.tusix,.tuseven,.tueight{
+	position: relative;
+}
+.tuthree .title,.tufour .title,.tufive .title,.tusix .title,.tuseven .title
+,.tueight .title{
+	padding-left: 45px;
+	padding-right: 45px;
+}
+.tuthree .title h2,.tufour .title,.tufive .title h2,.tusix .title h2,.tuseven .title h2,
+.tueight .title h2{
+	color: #333;
+}
+.tuthree .title p,.tufour .title p,.tufive .title p,.tuseven .title p,.tuseven .title p,
+.tueight .title p{
+	font-size:20px;
+	color: #333; 
+	margin-bottom: 0;
+}
+.tuthree .title span{
+	font-size: 12px;
+}
+.tuthree .btn,.tufour .btn,.tufive .btn,.tusix .btn,.tuseven .btn,.tueight .btn{
+	width: 120px;
+	height: 30px;
+	background-color: #0b2749;
+    border: 1px solid #666;
+    border-radius: 2px;
+    color:white;
+    margin-top: 20px;
+    display: block;
+    margin-bottom: 30px;
+    padding-top: 4px;
+}	
+	/*第三块结束*/
+/*主体块结束*/
+/*底部开始*/
+.footer{
+	margin-top: 50px;
+	padding-left: 45px;
+	padding-right: 45px;
+}
+.footer .bottom-tp .btn input{
+	width: 90px;
+	height: 30px;
+	background-color: #0b2749;
+	color: white;
+	letter-spacing: 5px;
+	border: none;
+	border-radius: 4px;
+}
+.footer .bottom-tp .btn{
+	padding-left: 0;
+}
+.footer .bottom-tp .icon a{
+	font-family: "iconfont";
+	font-size: 33px;
+	color: #666;
+}
+.footer .bottom-lf a{
+	display: block;
+	line-height: 30px;
+	color: #333;
+	font-size: 13px;
+}
+.footer .bottom-lf{
+	margin-top: 30px;
+}
+.footer .bottom-rt{
+	margin: 30px 0;
+}
+.footer .bottom-tp .icon a:first-child:hover{
+	color: #2E9827;
+}
+.footer .bottom-tp .icon a:nth-child(2):hover{
+	color: #D1391C;
+}
+.footer .bottom-tp .icon a:last-child:hover{
+	color: #67A5ED;
+}
+/*底部结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.header .logo{
+		left: 50%;
+		transform:translatex(-50%);
+	}
+	.tuone .title{
+		position: absolute;
+		bottom: 10px;
+		left: 0px;
+	}
+	.tuone .btn{
+		position: absolute;
+		bottom: 30px;
+		right: 40px;
+		width: 200px;
+	}
+	.tuone .title h2 a,.tuone .title p a{
+		color: #F0E9E9;
+	}
+	.tuone .btn button{
+		background-color: white;
+		color: black;
+		width: 120px;
+		height: 30px;
+	}
+	
+
+	
+
+}
+
+
+
+
+@media screen and (min-width: 992px) {
+	.header .logo{
+		left: 50%;
+		transform:translatex(-50%);
+	}
+	.header .logo a img{
+		width: 120px;
+		height: 52px;
+	}
+	.header .logo{
+		margin-top: 10px;
+	}
+	.tuone .gd,.tuone .btn,.tuone .title h2,.tuone .title p{
+		position: absolute;
+	}
+	.tuone .title h2{
+		bottom: 0px;
+		left: 30px;
+		height: 100px;
+		padding-right: 25px;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+		border-right:1px solid #ccc;
+	}
+	.tuone .title p{
+		bottom: 65px;
+		left: 450px;
+	}
+	.tuone .title h2 a,.tuone .title p a{
+		color: #F0E9E9;
+	}
+	.tuone .btn{
+		text-align: left;
+		width: 160px;
+		padding-left: 0;
+		bottom: 30px;
+		left:450px;
+	}
+	.tuone .btn button{
+		background-color: white;
+		color: black;
+		width: 120px;
+		height: 30px;
+		border-radius: 4px;
+	}
+	.tuone .gd{
+		right: 40px;
+		bottom: 40px;
+	}
+	.tuone .gd a span{
+		color: #F0E9E9;
+	}
+	.tuone .gd a span:first-child{
+		font-size: 16px;
+	}
+	.tuone .gd a span:last-child{
+		font-size: 30px;
+	}
+	.sty{
+		width: 100%;
+		background-color: #F9F9F9;
+	}
+	.sty h2{
+		float: left;
+		width: 143px;
+		margin-top: 0;
+		margin-bottom: 0;
+		display: inline-block;
+		color: #333;
+		background-color: #F9F9F9;
+	}
+	.sty span{
+		line-height: 110px;
+		font-size: 18px;
+		color: #333;
+
+	}
+	.goods .gh{
+	/*background-color: white;*/
+	padding: 20px 30px;
+	box-sizing:border-box;
+	}
+	.goods .gh .title .p{
+		font-size: 18px;
+		letter-spacing: 1px;
+		text-align: left;
+		margin-bottom: 0;
+	}
+	.goods .gh .title .span{
+		font-size: 10px;
+		display: block;
+		text-align: left;
+	}
+
+
+	.goods{
+		padding-bottom: 30px !important;
+	}
+	.goods .gh .gh-sty{
+		position: relative;
+	}
+	.gh-sty .gh-scd{
+		/*background-color: yellow;*/
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+	}
+	.gh-sty .gh-scd>div{
+		position: absolute;
+		z-index: -999;
+	}
+	.gh-sty .gh-scd .span{
+		top: 0px;
+		left: 0;
+		font-size: 8px;
+	}
+	.gh-sty .gh-scd .dbsp{
+		bottom: 0px;
+	}
+	.gh-sty .gh-scd .dbsp span:last-child{
+		display: block;
+		font-size: 24px;
+	}
+	.gh-sty .gh-scd .btns{
+		right: 0;
+		bottom: 10px;
+	}
+	.gh-sty .gh-scd .img7{
+		top: 30px;
+		text-align: right;
+	}
+	.goods .gh-sty .gh-scd{
+		opacity: 0;
+	}
+
+	.goods .gh:hover .gh-scd{
+		z-index: 99999;
+		opacity: 1;
+		transition:all 0.5s linear;
+	} 
+	.goods .gh:hover .bigcar{
+		visibility:hidden;
+	}
+	.tuthree{
+		border-top: 1px solid white;
+	}
+	.tuthree .title{
+		position: absolute;
+		top: 50%;
+		transform:translatey(-50%);
+		left: 70%;
+	}
+	.tufour .title,.tufive .title,.tusix .title,.tuseven .title{
+		position: absolute;
+		top: 40px;
+		left: 40px;
+	}
+	.tueight .title{
+		position: absolute;
+		right: 40px;
+		top: 40%;
+	}
+	.tuthree .title .btn,.tufour .title .btn,.tufive .title .btn,
+	.tusix .title .btn,.tuseven .title .btn,.tueight .title .btn{
+		display: block;
+		background-color: white;
+		color: black;
+		padding-top: 4px;
+		letter-spacing: 1px;
+		border-radius: 4px;
+		margin-top: 30px;
+	}
+	.tuthree .title p,.tuthree .title h2,
+	.tufour .title p,.tufour .title h2,
+	.tufive .title p,.tufive .title h2,
+	.tusix .title h2,.tuseven .title h2,.tuseven .title p{
+		color: #F0E9E9;
+	}
+	.tuthree .title span{
+		color: #F0E9E9;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 40px;
+	}
+	.footer .bottom-tp .form-control{
+		width: 334px;
+		height: 33px;
+	}
+	.bottom-tp{
+		position: relative;
+	}
+	.footer .btn{
+		position: absolute;
+		top: 0;
+		left: 380px;
+		padding-top: 0;
+		/*height: 33px;*/
+	}
+	.footer .bottom-tp .btn input{
+		height: 32px;
+	}
+	.footer .icon{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.footer .bottom-lf a{
+		display: inline-block;
+		
+	}
+	.footer .bottom-lf a:first-child~a{
+		padding-left: 20px;
+	}
+	.footer .bottom-bt{
+		position: relative;
+	}
+	.footer .bottom-rt{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}

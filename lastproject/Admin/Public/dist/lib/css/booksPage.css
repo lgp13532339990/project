@@ -1,0 +1,31 @@
+/*
+.bookListPage div a{
+    border:1px solid red;
+}
+
+.bookListPage>div>a:hover {
+    /*border-color: #50A8E6;
+    background-color:#f2f2f2;
+}
+
+.bookListPage>div>span.current {
+    background: #50A8E6;
+    color: #FFF;
+    font-weight: 700;
+    border-color: #50A8E6;
+}
+
+.bookListPage>div>a,span {
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    float:left;
+    margin:0;
+    margin-left:-1px;
+}
+*/

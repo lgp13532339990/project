@@ -1,0 +1,149 @@
+
+<div class="bar bar-header bar-assertive">
+	<a class="button button-clear icon ion-ios-book-outline" menu-toggle="left"></a>
+	<h1 class="title">百文斋</h1>
+	<a href="" ui-sref="login" class="button button-clear">
+		<span class="logname">{{name}}</span>登录
+	</a>
+</div>
+<ion-content id="contain" overflow-scroll="false" has-bouncing="true" class="has-tabs has-header">
+	<ion-slide-box auto-play="true" does-continue="true" slide-interval=2000 show-pager="true" pager-click="pageClick(index)" active-slide="model.activeIndex" delegate-handle="delegateHandler" class="">
+	  <ion-slide>
+	  	<img  class="box full-image" src="images/lunbo/1.jpg">
+	  </ion-slide>
+	  <ion-slide>
+	    <img  class="box full-image" src="images/lunbo/2.jpg">
+	  </ion-slide>
+	  <ion-slide on-slide-changed="slideHasChanged(index)">
+	    <img  class="box full-image" src="images/lunbo/3.jpg">
+	  </ion-slide>
+	  <ion-slide>
+	  	<img  class="box full-image" src="images/lunbo/4.jpg">
+	  </ion-slide>
+	  <ion-slide>
+	    <img  class="box full-image" src="images/lunbo/5.jpg">
+	  </ion-slide>
+	  <ion-slide on-slide-changed="slideHasChanged(index)">
+	    <img  class="box full-image" src="images/lunbo/6.jpg">
+	  </ion-slide>
+	</ion-slide-box>
+	<!-- 分隔 -->
+	<div class="clip">
+		<img  class="box full-image" src="images/jxzt1.jpg">
+	</div>
+	<!-- 分类图标 -->
+	<div class="icon-box">
+		<a href="">
+			<i class="icon ion-ios-book-outline icon-color1"></i>
+			<p>随读</p>
+		</a>
+		<a href="">
+			<i class="icon ion-map icon-color2"></i>
+			<p>古书</p>
+		</a>
+		<a href="">
+			<i class="icon ion-android-star-outline icon-color3"></i>
+			<p>公益</p>
+		</a>
+		<a href="">
+			<i class="icon ion-android-film icon-color4"></i>
+			<p>摄影</p>
+		</a>
+		<a href="">
+			<i class="icon ion-android-contacts icon-color5"></i>
+			<p>社团</p>
+		</a>
+		<div class="clearfix"></div>
+	</div>
+	<!-- 秒杀 -->
+	<div class="kill-time">
+		<span class="left"></span>
+		<div class="time">
+			<i class="icon ion-ios-alarm-outline"></i>
+			<span class="kill">秒杀抢购</span>
+			<div class="run">
+				<span class="hour run-t">14</span>
+				<span class="min run-t">30</span>
+				<span class="second run-t">27</span>
+			</div>
+		</div>
+		<span class="right"></span>
+		<div class="clearfix"></div>
+	</div>
+	<!-- 商品 -->
+	<div id="goods">
+		<div ng-repeat="item in goodsData" class="goods-item">
+			<a href="" ui-sref="des({id:{{item.id}}})">
+				<img ng-src="./shopApi/images/{{item.id}}.jpg">
+				<!-- <span class="notice">热销</span> -->
+				<p>{{item.price| currency:'&yen;'}}</p>
+			</a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!-- 热点 -->
+	<div class="hot">
+		<h4>百文热点</h4>
+		<ul>
+			<li><i>畅销</i>追问</li>
+			<li><i>畅销</i>穷查理宝典:查理·芒格智慧箴言录</li>
+			<li><i>畅销</i>世界的凛冬</li>
+			<li><i>畅销</i>人民的名义，一部反腐高压</li>
+		</ul>
+	</div>
+	<!-- 商品列表 -->
+	<div class="list">
+		<img class="box full-image" src="images/pl-rwsk.jpg">
+		<ul>
+			<li ng-repeat="item in goodsList" class="goods-item col-33">
+				<a href="" ui-sref="des({id:{{item.id}}})">
+					<p class="des">{{item.title}}</p>
+					<p class="price">{{item.price| currency:'&yen;'}}</p>
+					<img ng-src="./shopApi/images/{{item.id}}.jpg">
+				</a>
+			</li>
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+	<div class="list">
+		<img class="box full-image" src="images/pl-wxxs.jpg">
+		<ul>
+			<li ng-repeat="item in goodsList1" class="goods-item col-33">
+				<a href="" ui-sref="des({id:{{item.id}}})">
+					<p class="des">{{item.title}}</p>
+					<p class="price">{{item.price| currency:'&yen;'}}</p>
+					<img ng-src="./shopApi/images/{{item.id}}.jpg">
+				</a>
+			</li>
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+	<div class="list">
+		<img class="box full-image" src="images/cdj.jpg">
+		<ul>
+			<li ng-repeat="item in moregoods" class="goods-item col-33">
+				<a href="" ui-sref="des({id:{{item.id}}})">
+					<img ng-src="./shopApi/images/{{item.id}}.jpg">
+					<p class="des">{{item.title}}</p>
+					<p class="price">{{item.new_price| currency:'&yen;'}}</p>
+				</a>
+			</li>
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+	<!-- 延迟加载 -->
+	<ion-infinite-scroll on-infinite="loadMore()">
+	</ion-infinite-scroll>
+	<!-- 底部 -->
+	<div class="foot-box">
+		<button ui-sref="login">登录</button>
+		<button ui-sref="regist">注册</button>
+		<p>m.wenxuan.com</p>
+	</div>
+	<!-- 返回顶部 -->
+</ion-content>
+<div class="toTop">
+	<a href="#contain">
+		<i class="icon ion-arrow-up-c icon-color1"></i>
+	</a>
+</div>

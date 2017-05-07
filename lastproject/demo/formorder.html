@@ -1,0 +1,74 @@
+<div class="bar bar-header bar-assertive">
+	<a class="button button-clear icon ion-chevron-left" menu-toggle="left" onclick="javascript:window.history.back(-1);"></a>
+	<h1 class="title">确认订单</h1>
+</div>
+<ion-content id="contain" overflow-scroll="false" has-bouncing="true" class="has-tabs has-header">
+	<div class="list formorder">
+		<div class="adress">
+		  <a class="item item-icon-right" href="">
+		    <i class="icon ion-chevron-right"></i>
+		    <p>请新建收货地址以确保商品顺利到达</p>
+		  </a>
+	  	</div>
+	  	<div class="order">
+			  <a class="item item-icon-right" href="">
+			    <i class="icon ion-chevron-right"></i>
+			    <span class="left">配送方式</span>
+			  </a>
+			  <a class="item item-icon-right" href="">
+			    <i class="icon ion-chevron-right"></i>
+			    <span class="left">支付方式</span>
+			  </a>
+			  <a class="item item-icon-right" href="">
+			    <i class="icon ion-chevron-right"></i>
+			    <span class="left">发票信息</span>
+			    <span class="item-note">
+			      不需要发票
+			    </span>
+			  </a>
+			  <a class="item item-icon-right" href="">
+			    <i class="icon ion-chevron-right"></i>
+			    <span class="left">礼券</span>
+			    <span class="item-note">
+			      无可用
+			    </span>
+			  </a>
+			  <a class="item item-icon-right" href="">
+			    <i class="icon ion-chevron-right"></i>
+			    <span class="left">礼品卡/畅读卡</span>
+			    <span class="item-note">
+			      无可用
+			    </span>
+			  </a>
+	  	</div>
+	</div>
+	<div class="ordergood">
+		 <a class="item item-icon-right" href="">
+		 	<span>共{{totalNumber}}商品</span>
+		    <i class="icon ion-cube"></i>
+		  </a>
+	</div>
+	<div class="shopcar">
+		<div class="shop-cont" ng-repeat="(key,value) in goodOder">
+			<div class="img">
+				<img ng-src="./shopApi/images/{{value.imgId}}.jpg">
+			</div>
+			<div class="des">
+				<p class="name">{{value.name}}</p>
+				<p class="price">{{value.price | currency:"￥"}}</p>
+				<p class="mtotal ordernum">数量：
+					<span class="ion-close-round">
+					</span><span>{{value.number}}</span>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="pay">
+		<div class="money ordermoney">
+			<p>合 计：<span>{{totalPrice | currency:"￥"}}</span></p>
+		</div>
+		<div class="jies orderform"  ui-sref="formorder" ng-click="formOrder()">提交订单</div>
+		<div class="clearfix"></div>
+	</div>
+</ion-content>

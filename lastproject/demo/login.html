@@ -1,0 +1,34 @@
+<div class="bar bar-header bar-assertive">
+	<a class="button button-clear icon ion-chevron-left" menu-toggle="left" onclick="javascript:window.history.back(-1);"></a>
+	<h1 class="title">百文登录</h1>
+</div>
+<ion-content id="contain" overflow-scroll="false" has-bouncing="true" class="has-tabs has-header">
+	<form name="myForm" ng-submit="submitData()">
+		<div class="list">
+		  <label class="item item-input">
+		    <input type="text" placeholder="用户名" ng-model="userdata.username" name="usernameEle">
+		  </label>
+		  <label class="item item-input">
+		    <input type="text" placeholder="密 码" ng-model="userdata.password" name="passwordEle">
+		  </label>
+		</div>
+		<p ng-if="num" class="alertp">{{alertvalue}}</p>
+		<button class="button button-block button-assertive button-small">提交</button>
+	</form>
+	<button class="button button-block button-assertive button-small" ui-sref="regist">注册</button>
+	<p class="login-line">---------------其他方式--------------</p>
+	<div class="login-service row">
+		<div class="col-33">
+			<i class="ion-social-html5-outline"></i>
+			<p>100%正品保证</p>
+		</div>
+		<div class="col-33">
+			<i class="ion-ios-briefcase"></i>
+			<p>7天无理由退换货</p>
+		</div>
+		<div class="col-33">
+			<i class="ion-android-car"></i>
+			<p>多仓直发快速配送</p>
+		</div>
+	</div>
+</ion-content>

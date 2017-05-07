@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="framejs/ionic/css/ionic.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+		<ion-side-menus>
+			<ion-side-menu-content>
+				<div ui-view></div>
+				<div ng-controller="tabsCtrl">
+					<ion-tabs class="tabs-icon-top tabs-color-active-assertive">
+						<ion-tab title="首页" icon="ion-home" href="" ui-sref="home"></ion-tab>
+						<ion-tab title="分类搜索" icon="ion-ios-search-strong" href="" ui-sref="search"></ion-tab>
+						<ion-tab title="购物车" icon="ion-ios-cart" href="" badge="totalNumber" badge-style="badge-assertive" ui-sref="shopcar"></ion-tab>
+						<ion-tab title="我的百文" icon="ion-person" href="" ui-sref="personal"></ion-tab>
+					</ion-tabs>
+				</div>
+			</ion-side-menu-content>
+		</ion-side-menus>
+
+
+
+		<script src="framejs/ionic/js/angular/angular.min.js"></script>	
+		<script src="framejs/ionic/js/angular-ui/angular-ui-router.min.js"></script>
+		<script src="framejs/ionic/js/angular/angular-sanitize.min.js"></script>
+		<script src="framejs/ionic/js/ionic.bundle.min.js"></script>
+		<script src="framejs/angular-cookies.min.js"></script>
+		<script src="framejs/jquery.min.js"></script>
+		<script src="myjs/app.js"></script>
+		<script src="myjs/home.js"></script>
+		<script src="myjs/index.js"></script>
+		<script src="myjs/des.js"></script>
+		<script src="myjs/login.js"></script>
+		<script src="myjs/regist.js"></script>
+		<script src="myjs/shopcar.js"></script>
+		<script src="myjs/emptycar.js"></script>
+		<script src="myjs/formorder.js"></script>
+		<script src="myjs/search.js"></script>
+		<script src="myjs/personal.js"></script>
+		<script src="myjs/tabs.js"></script>
+		<script src="myjs/service.js"></script>
+		
+	</body>
+</html>

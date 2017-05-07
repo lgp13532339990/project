@@ -1,0 +1,51 @@
+<div class="bar bar-header bar-assertive">
+	<a class="button button-clear icon ion-chevron-left" menu-toggle="left" onclick="javascript:window.history.back(-1);"></a>
+	<h1 class="title">百文注册</h1>
+</div>
+<ion-content id="contain" overflow-scroll="false" has-bouncing="true" class="has-tabs has-header">
+	<form name="myForm" ng-submit="submitData()" class="registp">		
+		<div class="list">
+		  <label class="item item-input">
+		    <input type="text" 
+		    placeholder="请输入您的用户名" 
+		    ng-model="userdata.name" 
+		    name="usernameEle" 
+		    ng-required="true"
+		    ng-pattern="/^\w{4,12}$/"
+		    >
+		  </label>
+		  <p ng-if="myForm.usernameEle.$touched && myForm.usernameEle.$invalid">用户名由4-12位数字字母下划线组成</p>
+		  <label class="item item-input">
+		    <input type="text" 
+		    placeholder="请输入您的密码" 
+		    ng-model="userdata.password" 
+		    name="passwordEle" 
+		    ng-minlength="6"
+            ng-maxlength="18"
+		    ng-required="true">
+		  </label>
+		  <p ng-if="myForm.passwordEle.$touched && (myForm.passwordEle.$error.minlength || myForm.passwordEle.$error.maxlength)">密码长度为6-18位</p>
+		  <label class="item item-input">
+		    <input type="number" 
+		    placeholder="请输入您的电话" 
+		    ng-model="userdata.tel" 
+		    name="telEle" 
+		    ng-required="true"
+		    ng-pattern="/^1[34578]\d{9}$/"
+		    >
+		  </label>
+		  <p ng-if="myForm.telEle.$touched && myForm.telEle.$invalid">手机号码有误</p>
+		  <label class="item item-input">
+		    <input type="text" 
+		    placeholder="请输入性别男或女" 
+		    ng-model="userdata.sex" 
+		    name="sexEle" 
+		    ng-required="true"
+		    ng-pattern = "/^['男'|'女']$/"
+		    ></input>
+		  </label>
+		  <p ng-if="myForm.sexEle.$touched && myForm.sexEle.$invalid">请输入男或女</p>
+		</div>
+		<button class="button button-block button-assertive button-small">注册</button>
+	</form>
+</ion-content>

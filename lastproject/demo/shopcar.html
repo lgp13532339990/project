@@ -1,0 +1,28 @@
+<div class="bar bar-header bar-assertive">
+	<a class="button button-clear icon ion-chevron-left" menu-toggle="left" onclick="javascript:window.history.back(-1);"></a>
+	<h1 class="title">购物车</h1>
+</div>
+<ion-content id="contain" overflow-scroll="false" has-bouncing="true" class="has-tabs has-header">
+	<div class="shopcar">
+		<div class="shop-cont" ng-repeat="(key,value) in goodData">
+			<div class="img">
+				<img ng-src="./shopApi/images/{{value.imgId}}.jpg">
+			</div>
+			<div class="des">
+				<p class="name">{{value.name}}</p>
+				<button class="del" ng-click="del(key)">删除</button>
+				<p class="price">{{value.price | currency:"￥"}}</p>
+				<button ng-click="minusNumber(value)">-</button><span class="num">{{value.number}}</span><button ng-click="addNumber(value)">+</button>
+				<p class="mtotal">小计:<span>{{value.price*value.number | currency:"￥"}}</span></p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="pay">
+		<div class="money">
+			<p>合 计：<span>{{totalPrice | currency : "￥"}}</span></p>
+		</div>
+		<div class="jies"  ui-sref="formorder">结 算</div>
+		<div class="clearfix"></div>
+	</div>
+</ion-content>

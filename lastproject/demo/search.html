@@ -1,0 +1,31 @@
+<div class="bar bar-header bar-assertive item-input-inset">
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    <input type="search" placeholder="Search" ng-model="keyword">
+  </label>
+  <button class="button" ng-click="searchName()">
+    搜索
+  </button>
+</div>
+<ion-content id="contain" overflow-scroll="false" has-bouncing="true" class="has-tabs has-header">
+	<div class="orderprice">
+		<a href="" ng-click="turnPrice()">价格从低到高</a>
+		<i class="{{icon}}" ng-if="priceNum"></i>
+		<div class="clearfix"></div>
+	</div>
+	<div class="ordergood" ng-repeat="item in productData | filter:{title:keytext} | orderBy:price">
+		<a href=""  ui-sref="des({id:item.id})">
+			<div class="img">
+				<img ng-src="./shopApi/images/{{item.id}}.jpg">
+			</div>
+			<div class="des">
+				<div class="title"><span>{{item.title}}</span></div>
+				<p class="name">{{item.author}}<span> (著作)</span></p>
+				<p class="price">{{item.price | currency:"￥"}}</p>
+			</div>
+			<div class="clearfix"></div>
+		</a>
+	</div>
+	<ion-infinite-scroll on-infinite="searchMore()" ng-if="true">
+	</ion-infinite-scroll>
+</ion-content>

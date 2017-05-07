@@ -1,0 +1,98 @@
+<ion-content id="contain" overflow-scroll="false" has-bouncing="true" class="has-tabs">
+	<div class="person">
+		<div class="icon">
+			<i class="ion-android-contact"></i>
+			<p>您好
+				<span>{{name}}</span>
+				<span ng-if="backnum" ng-click="goback()">[注销]</span>
+			</p>
+			<div class="bottom">
+				<div class="left">
+					<p class="text">0</p>
+					<p >我的收藏</p>
+				</div>
+				<div class="right">
+					<p class="text">0</p>
+					<p >我的足迹</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="list">
+			<a class="item item-icon-left" href="">
+			    <i class="icon ion-clipboard"></i>
+			    我的订单
+			    <span class="item-note" ng-click="openOrder()">
+			      查看全部订单
+			      <i class="ion-chevron-down"></i>
+			    </span>
+			</a>
+			<div class="shopcar" ng-if="openN" ng-repeat="item in goodData">
+				<div class="shop-cont" ng-repeat="value in item" >
+					<div class="img">
+						<img ng-src="./shopApi/images/{{value.book_id}}.jpg">
+					</div>
+					<div class="des">
+						<p class="name">{{value.order_addtime}}</p>
+						<p class="price">{{value.book_price | currency:"￥"}}</p>
+						<p class="mtotal ordernum">数量：
+							<span class="ion-close-round">
+							</span><span>{{value.book_num}}</span>
+						</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="service">
+			<div class="section">
+				<i class="ion-android-archive"></i>
+				<p>待付款</p>
+			</div>
+			<div class="section">
+				<i class="ion-android-bus"></i>
+				<p>待发货</p>
+			</div>
+			<div class="section">
+				<i class="ion-android-exit"></i>
+				<p>待收货</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="list">
+			<a class="item item-icon-left" href="">
+			    <i class="icon ion-android-drafts"></i>
+			    我的钱包
+			    <span class="item-note">
+			      礼券/礼品卡等
+			      <i class="ion-chevron-down"></i>
+			    </span>
+			</a>
+		</div>
+		<div class="service money">
+			<div class="section">
+				<i>￥0.00</i>
+				<p>暂存款</p>
+			</div>
+			<div class="section">
+				<i>0</i>
+				<p>礼品卡</p>
+			</div>
+			<div class="section">
+				<i>0</i>
+				<p>礼券</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="list">
+			<a class="item item-icon-left" href="">
+			    <i class="icon ion-android-person-add"></i>
+			    帮助中心
+			    <span class="item-note">
+			      客服电话及常见问题
+			      <i class="ion-chevron-down"></i>
+			    </span>
+			</a>
+		</div>
+	</div>
+</ion-content>
